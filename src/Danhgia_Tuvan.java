@@ -17,12 +17,12 @@ import javax.swing.table.TableColumn;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Quang
  */
 public class Danhgia_Tuvan extends javax.swing.JFrame {
+
     public static Vector diem_danhgia;
     public int[][] mang_diem_DG; // mang 2 chieu
     public float[] mang_Trongso; // mang trong so
@@ -31,7 +31,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     public Object[][] oj_lesson;
     public int row;
     JFrame frame;
-    public int n=0; // so chuyen gia
+    public int n = 0; // so chuyen gia
     public static float[] temp_C;  //mang luu tru do tich cuc
     public float[] chose_danhgia; //mang luu bo danh gia da dc chon
     Connection con = null;
@@ -42,12 +42,13 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     Chose_Lesson chose_lesson;
     public static Vector vt_rating, vt_chose_lesson;
     public String body_mail;
+
     /**
      * Creates new form Danhgia_Tuvan
      */
     public Danhgia_Tuvan() {
         initComponents();
-         this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
         docFile();
         connectionSQL();
         jSpinner1.setEnabled(false);
@@ -62,6 +63,8 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jTextPane10 = new javax.swing.JTextPane();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -79,8 +82,38 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        jPanel13 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTextPane3 = new javax.swing.JTextPane();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTextPane4 = new javax.swing.JTextPane();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jTextPane5 = new javax.swing.JTextPane();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jTextPane6 = new javax.swing.JTextPane();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jTextPane7 = new javax.swing.JTextPane();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jTextPane8 = new javax.swing.JTextPane();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        jTextPane9 = new javax.swing.JTextPane();
+        jScrollPane16 = new javax.swing.JScrollPane();
+        jTextPane11 = new javax.swing.JTextPane();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        jComboBox8 = new javax.swing.JComboBox<>();
+        jComboBox9 = new javax.swing.JComboBox<>();
+        jComboBox10 = new javax.swing.JComboBox<>();
+        jScrollPane17 = new javax.swing.JScrollPane();
+        jTextPane12 = new javax.swing.JTextPane();
         jButton3 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -94,7 +127,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton5 = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -102,9 +134,14 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jPanel12 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel15 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+
+        jTextPane10.setText("H1");
+        jScrollPane15.setViewportView(jTextPane10);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Chương trình đánh giá và tư vấn bài giảng");
@@ -208,7 +245,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,49 +273,134 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Bộ trọng số"));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"Trọng số", "0.2", "0.2", "0.1", "0.2", "0.05", "0.05", "0.1", "0.05", "0.05"}
-            },
-            new String [] {
-                "", "H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9"
-            }
-        ));
-        jTable2.setRowSelectionAllowed(false);
-        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jTable2MouseExited(evt);
+        jTextPane1.setText("Trọng số");
+        jScrollPane6.setViewportView(jTextPane1);
+
+        jTextPane2.setText("H1");
+        jScrollPane7.setViewportView(jTextPane2);
+
+        jTextPane3.setText("H2");
+        jScrollPane8.setViewportView(jTextPane3);
+
+        jTextPane4.setText("H3");
+        jScrollPane9.setViewportView(jTextPane4);
+
+        jTextPane5.setText("H4");
+        jScrollPane10.setViewportView(jTextPane5);
+
+        jTextPane6.setText("H5");
+        jScrollPane11.setViewportView(jTextPane6);
+
+        jTextPane7.setText("H6");
+        jScrollPane12.setViewportView(jTextPane7);
+
+        jTextPane8.setText("H7");
+        jScrollPane13.setViewportView(jTextPane8);
+
+        jTextPane9.setText("H8");
+        jScrollPane14.setViewportView(jTextPane9);
+
+        jTextPane11.setText("H9");
+        jScrollPane16.setViewportView(jTextPane11);
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
             }
         });
-        jScrollPane2.setViewportView(jTable2);
-        if (jTable2.getColumnModel().getColumnCount() > 0) {
-            jTable2.getColumnModel().getColumn(0).setPreferredWidth(120);
-            jTable2.getColumnModel().getColumn(1).setResizable(false);
-            jTable2.getColumnModel().getColumn(2).setResizable(false);
-            jTable2.getColumnModel().getColumn(3).setResizable(false);
-            jTable2.getColumnModel().getColumn(4).setResizable(false);
-            jTable2.getColumnModel().getColumn(5).setResizable(false);
-            jTable2.getColumnModel().getColumn(6).setResizable(false);
-            jTable2.getColumnModel().getColumn(7).setResizable(false);
-            jTable2.getColumnModel().getColumn(8).setResizable(false);
-            jTable2.getColumnModel().getColumn(9).setResizable(false);
-        }
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 572, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
+
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
+
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
+
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
+
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
+
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
+
+        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
+
+        jTextPane12.setText("Độ quan trọng");
+        jScrollPane17.setViewportView(jTextPane12);
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane17, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                    .addComponent(jScrollPane6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane7)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane8)
+                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane9)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane10)
+                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane11)
+                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane12)
+                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane13)
+                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane14)
+                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jComboBox10, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(383, 383, 383))
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         jButton3.setText("Xếp hạng chuyên gia");
@@ -293,19 +415,39 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(231, 231, 231)
+                        .addComponent(jButton3)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addGap(254, 254, 254))
+        );
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(241, 241, 241))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -313,11 +455,9 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -327,7 +467,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -449,36 +589,21 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane4.setViewportView(jTextArea1);
 
-        jButton5.setText("Gửi mail");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jScrollPane4)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addGap(0, 293, Short.MAX_VALUE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(287, 287, 287))))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 676, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(jButton5)
-                .addContainerGap())
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -490,7 +615,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -561,7 +686,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -574,6 +699,21 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Đánh giá truyền thống", jPanel10);
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 844, Short.MAX_VALUE)
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 550, Short.MAX_VALUE)
+        );
+
+        jTabbedPane2.addTab("tab1", jPanel15);
+
+        jTabbedPane1.addTab("Biểu đồ biểu diễn đánh giá", jTabbedPane2);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -599,8 +739,8 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-         tieu_chi = new Tieu_chi();        
-         tieu_chi.setVisible(true);
+        tieu_chi = new Tieu_chi();
+        tieu_chi.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
@@ -609,43 +749,43 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-       n = Integer.valueOf(jSpinner1.getValue().toString());
-       process_Danhgia_Trongso();
-       int debug = 0;
-       
-         if(n==0){
-             debug = 1;               
-         }
-         
-         if (debug == 1) {
+        n = Integer.valueOf(jSpinner1.getValue().toString());
+        process_Danhgia_Trongso();
+        int debug = 0;
+
+        if (n == 0) {
+            debug = 1;
+        }
+
+        if (debug == 1) {
             JOptionPane jo = new JOptionPane("Thông báo");
             jo.showMessageDialog(this, "Bạn chưa nhập thông tin đánh giá của chuyên gia");
         }
-         
-         for(int i =0; i<n;i++){
-            for(int j =0; j<9; j++){
-                if((mang_diem_DG[i][j]>9)||(mang_diem_DG[i][j]==0)){
-                    debug = 2;               
-                } 
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 9; j++) {
+                if ((mang_diem_DG[i][j] > 9) || (mang_diem_DG[i][j] == 0)) {
+                    debug = 2;
+                }
             }
         }
-         
+
         if (debug == 2) {
             JOptionPane jo = new JOptionPane("Thông báo");
             jo.showMessageDialog(this, "Giá trị đánh giá tác động của tiêu chí phải là số nguyên thuộc [1,9]");
         }
-        
+
         if (tong_trongso != 1) {
             debug = 3;
         }
-        
-        if (debug!=1 && debug != 2) {
+
+        if (debug != 1 && debug != 2) {
             if (debug == 3) {
                 JOptionPane jo = new JOptionPane("Thông báo");
                 jo.showMessageDialog(this, "Tổng bộ trọng số phải có giá trị bằng 1");
             }
         }
-       
+
         if (debug == 0) {
             update_Rating();
             pickCG();
@@ -660,10 +800,10 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 jTextArea2.setText(danhgia_Tuvan(danhgia_tt)[1]);
             } catch (SQLException ex) {
                 Logger.getLogger(Danhgia_Tuvan.class.getName()).log(Level.SEVERE, null, ex);
-            }               
-                jTextArea2.setEditable(false);
+            }
+            jTextArea2.setEditable(false);
         }
-       
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -681,10 +821,10 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 }
                 String str_body = "Bài giảng đạt chất lượng: ";
                 str_body += danhgia_Tuvan(chose_danhgia)[0];
-                str_body +="\n Tư vấn: \n";
+                str_body += "\n Tư vấn: \n";
                 str_body += danhgia_Tuvan(chose_danhgia)[1];
                 body_mail = new String(str_body);
-                
+
                 jLabel3.setText(danhgia_Tuvan(chose_danhgia)[0]);
                 jTextArea1.setText(danhgia_Tuvan(chose_danhgia)[1]);
                 jTextArea1.setEditable(false);
@@ -694,44 +834,40 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             }
         }
 
-        
+
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jTable2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseExited
-
-    }//GEN-LAST:event_jTable2MouseExited
 
     private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
         // TODO add your handling code here:
-        if(vt_rating.size()==0){
-            if(jTable1.getRowCount()==0){
+        if (vt_rating.size() == 0) {
+            if (jTable1.getRowCount() == 0) {
                 set_NumberCG();
-            }else{
-                int dem=0;
+            } else {
+                int dem = 0;
                 for (int i = 0; i < jTable1.getRowCount(); i++) {
                     for (int j = 2; j < 11; j++) {
-                        if(jTable1.getValueAt(i, j)!=null){
+                        if (jTable1.getValueAt(i, j) != null) {
                             dem++;
                             break;
                         }
                     }
                 }
-                
-                if(dem==0){
+
+                if (dem == 0) {
                     set_NumberCG();
-                }else{
+                } else {
                     int[] debug = new int[dem];
-                    int count=0;
+                    int count = 0;
                     for (int i = 0; i < jTable1.getRowCount(); i++) {
                         for (int j = 2; j < 11; j++) {
                             if (jTable1.getValueAt(i, j) != null) {
-                                debug[count]=i;
+                                debug[count] = i;
                                 count++;
                                 break;
                             }
                         }
                     }
-                    
+
                     if ((Integer) jSpinner1.getValue() >= debug.length) {
                         oj_lesson = new Object[(Integer) jSpinner1.getValue()][11];
                         for (int i = 0; i < debug.length; i++) {
@@ -746,7 +882,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                             oj_lesson[i][1] = "Chuyên gia " + (i + 1);
                         }
                         set_Table1(oj_lesson);
-                    }else{
+                    } else {
                         oj_lesson = new Object[(Integer) jSpinner1.getValue()][11];
                         for (int i = 0; i < (Integer) jSpinner1.getValue(); i++) {
                             oj_lesson[i][0] = i + 1;
@@ -755,13 +891,13 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                                 oj_lesson[i][j] = jTable1.getValueAt(i, j);
                             }
                         }
-                         set_Table1(oj_lesson);
+                        set_Table1(oj_lesson);
                     }
                 }
             }
-        }else{
-            oj_lesson = new Object[(Integer)jSpinner1.getValue()][11];
-                for (int i = 0; i < vt_rating.size(); i++) {
+        } else {
+            oj_lesson = new Object[(Integer) jSpinner1.getValue()][11];
+            for (int i = 0; i < vt_rating.size(); i++) {
                 oj_lesson[i][0] = i + 1;
                 oj_lesson[i][1] = "Chuyên gia " + (i + 1);
                 oj_lesson[i][2] = ((Info_Rating) vt_rating.elementAt(i)).x1;
@@ -774,13 +910,13 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 oj_lesson[i][9] = ((Info_Rating) vt_rating.elementAt(i)).x8;
                 oj_lesson[i][10] = ((Info_Rating) vt_rating.elementAt(i)).x9;
             }
-               for (int i = vt_rating.size(); i < (Integer) jSpinner1.getValue(); i++) {
+            for (int i = vt_rating.size(); i < (Integer) jSpinner1.getValue(); i++) {
                 oj_lesson[i][0] = i + 1;
                 oj_lesson[i][1] = "Chuyên gia " + (i + 1);
             }
             set_Table1(oj_lesson);
         }
-            
+
     }//GEN-LAST:event_jSpinner1StateChanged
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -791,73 +927,53 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
 
     private void jTable1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MousePressed
         // TODO add your handling code here:
-         // TODO add your handling code here:
-         if(evt.getButton()== MouseEvent.BUTTON3){
-             int y = evt.getY();
-             row = Math.round(y / jTable1.getRowHeight());
-             jTable1.setRowSelectionInterval(row, row);
-             JPopupMenu popupMenu = new JPopupMenu();
-             JMenuItem deleMenuItem = new JMenuItem("Delete");
+        // TODO add your handling code here:
+        if (evt.getButton() == MouseEvent.BUTTON3) {
+            int y = evt.getY();
+            row = Math.round(y / jTable1.getRowHeight());
+            jTable1.setRowSelectionInterval(row, row);
+            JPopupMenu popupMenu = new JPopupMenu();
+            JMenuItem deleMenuItem = new JMenuItem("Delete");
 
-             deleMenuItem.addActionListener(new ActionListener() {
+            deleMenuItem.addActionListener(new ActionListener() {
 
-                 public void actionPerformed(ActionEvent e) {
-                     int n = JOptionPane.showConfirmDialog(frame, "Bạn có chắc chắn muốn xóa sinh viên khỏi danh sách",
-                             "Thông Báo",
-                             JOptionPane.YES_NO_OPTION);
-                     if (n == JOptionPane.YES_OPTION) {
-                         try {
-                             String space = " ";
-                             String str = "Delete From Rating where" + space;
-                             str += "ID_Lesson=" + ((Info_Lesson) vt_chose_lesson.elementAt(0)).ID_lesson + " and" + space;
-                             str += "X1=" + ((Info_Rating) vt_rating.elementAt(row)).x1 + " and" + space;
-                             str += "X2=" + ((Info_Rating) vt_rating.elementAt(row)).x2 + " and" + space;
-                             str += "X3=" + ((Info_Rating) vt_rating.elementAt(row)).x3 + " and" + space;
-                             str += "X4=" + ((Info_Rating) vt_rating.elementAt(row)).x4 + " and" + space;
-                             str += "X5=" + ((Info_Rating) vt_rating.elementAt(row)).x5 + " and" + space;
-                             str += "X6=" + ((Info_Rating) vt_rating.elementAt(row)).x6 + " and" + space;
-                             str += "X7=" + ((Info_Rating) vt_rating.elementAt(row)).x7 + " and" + space;
-                             str += "X8=" + ((Info_Rating) vt_rating.elementAt(row)).x8 + " and" + space;
-                             str += "X9=" + ((Info_Rating) vt_rating.elementAt(row)).x9;
-                             stmt = con.createStatement();
-                             stmt.executeUpdate(str);
-                             con.commit();
-                             
-                             
-                         } catch (SQLException ex) {
-                             Logger.getLogger(Danhgia_Tuvan.class.getName()).log(Level.SEVERE, null, ex);
-                         }
-                       show_Danhgia(((Info_Lesson) vt_chose_lesson.elementAt(0)).ID_lesson);
-                     }
-            }
-        });
-        popupMenu.add(deleMenuItem);
-          jTable1.setComponentPopupMenu(popupMenu);
-         }
+                public void actionPerformed(ActionEvent e) {
+                    int n = JOptionPane.showConfirmDialog(frame, "Bạn có chắc chắn muốn xóa sinh viên khỏi danh sách",
+                            "Thông Báo",
+                            JOptionPane.YES_NO_OPTION);
+                    if (n == JOptionPane.YES_OPTION) {
+                        try {
+                            String space = " ";
+                            String str = "Delete From Rating where" + space;
+                            str += "ID_Lesson=" + ((Info_Lesson) vt_chose_lesson.elementAt(0)).ID_lesson + " and" + space;
+                            str += "X1=" + ((Info_Rating) vt_rating.elementAt(row)).x1 + " and" + space;
+                            str += "X2=" + ((Info_Rating) vt_rating.elementAt(row)).x2 + " and" + space;
+                            str += "X3=" + ((Info_Rating) vt_rating.elementAt(row)).x3 + " and" + space;
+                            str += "X4=" + ((Info_Rating) vt_rating.elementAt(row)).x4 + " and" + space;
+                            str += "X5=" + ((Info_Rating) vt_rating.elementAt(row)).x5 + " and" + space;
+                            str += "X6=" + ((Info_Rating) vt_rating.elementAt(row)).x6 + " and" + space;
+                            str += "X7=" + ((Info_Rating) vt_rating.elementAt(row)).x7 + " and" + space;
+                            str += "X8=" + ((Info_Rating) vt_rating.elementAt(row)).x8 + " and" + space;
+                            str += "X9=" + ((Info_Rating) vt_rating.elementAt(row)).x9;
+                            stmt = con.createStatement();
+                            stmt.executeUpdate(str);
+                            con.commit();
+
+                        } catch (SQLException ex) {
+                            Logger.getLogger(Danhgia_Tuvan.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        show_Danhgia(((Info_Lesson) vt_chose_lesson.elementAt(0)).ID_lesson);
+                    }
+                }
+            });
+            popupMenu.add(deleMenuItem);
+            jTable1.setComponentPopupMenu(popupMenu);
+        }
     }//GEN-LAST:event_jTable1MousePressed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-            // TODO add your handling code here:
-        if ((jTextArea1.getText() != null)&&(jLabel3.getText() != null)) {
-            String subject = "Kết quả đánh giá và tư vấn bài giảng \" "+((Info_Lesson)vt_chose_lesson.elementAt(0)).name_lesson+" \"";
-            String str = "Select mail From Lesson,Author where Lesson.ID_Author = Author.ID_Author and Lesson.ID_Lesson=" + ((Info_Lesson) vt_chose_lesson.elementAt(0)).ID_lesson;
-            String mail="";
-            try {
-                stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery(str);
-                rs.next();
-                mail = rs.getString(1);
-            } catch (SQLException ex) {
-                Logger.getLogger(Danhgia_Tuvan.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            sendMail(mail, subject, body_mail);
-        }else{
-            JOptionPane jo = new JOptionPane("Thông báo");
-            jo.showMessageDialog(this, "Chưa có kết quả tư vấn và đánh giá");
-        }
-            
-      
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -872,17 +988,13 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
          * default look and feel. For details see
          * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
-        try{
-      UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
-    }
-    catch (UnsupportedLookAndFeelException e) {
-    }
-    catch (ClassNotFoundException e) {
-    }
-    catch (InstantiationException e) {
-    }
-    catch (IllegalAccessException e) {
-    }
+        try {
+            UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
+        } catch (UnsupportedLookAndFeelException e) {
+        } catch (ClassNotFoundException e) {
+        } catch (InstantiationException e) {
+        } catch (IllegalAccessException e) {
+        }
         //</editor-fold>
 
         /*
@@ -900,7 +1012,15 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JComboBox<String> jComboBox10;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jComboBox7;
+    private javax.swing.JComboBox<String> jComboBox8;
+    private javax.swing.JComboBox<String> jComboBox9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     public static javax.swing.JLabel jLabel11;
@@ -919,6 +1039,8 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -928,35 +1050,55 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     public static javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
+    private javax.swing.JScrollPane jScrollPane16;
+    private javax.swing.JScrollPane jScrollPane17;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     public static javax.swing.JSpinner jSpinner1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     public static javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane10;
+    private javax.swing.JTextPane jTextPane11;
+    private javax.swing.JTextPane jTextPane12;
+    private javax.swing.JTextPane jTextPane2;
+    private javax.swing.JTextPane jTextPane3;
+    private javax.swing.JTextPane jTextPane4;
+    private javax.swing.JTextPane jTextPane5;
+    private javax.swing.JTextPane jTextPane6;
+    private javax.swing.JTextPane jTextPane7;
+    private javax.swing.JTextPane jTextPane8;
+    private javax.swing.JTextPane jTextPane9;
     // End of variables declaration//GEN-END:variables
 
-    
     //--------------------- XEP HANG DANH GIA CUA CHUYEN GIA -----------------------------------
-    
     //Cai dat so chuyen gia tham gia danh gia
-    public void set_NumberCG(){
+    public void set_NumberCG() {
         n = Integer.valueOf(jSpinner1.getValue().toString());
         Object[][] oj = new Object[n][11];
-        
+
         for (int i = 0; i < n; i++) {
             oj[i][0] = i + 1;
             int number = i + 1;
             oj[i][1] = "Chuyên gia " + number;
-
         }
-            
-           jTable1.setModel(new javax.swing.table.DefaultTableModel(
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
                 oj,
                 new String[]{
                     "TT", "Tên", "X1", "X2", "X3", "X4", "X5", "X6", "X7", "X8", "X9"
@@ -978,7 +1120,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             }
         });
 
-
         jTable1.setCellSelectionEnabled(true);
         jTable1.setDefaultEditor(Integer.class, new IntegerEditor(1, 9));
 
@@ -996,12 +1137,54 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jTable1.getColumnModel().getColumn(8).setResizable(false);
         jTable1.getColumnModel().getColumn(9).setResizable(false);
         jTable1.getColumnModel().getColumn(10).setResizable(false);
-       
+
     }
-    
-    public void process_Danhgia_Trongso(){
-         mang_diem_DG = new int[n][9];
-                
+
+    //Xu li trong so
+    public float getValue(JComboBox<String> jcb) {
+        String str = jcb.getSelectedItem().toString();
+        float value;
+        if (str.equals("ít")) {
+            value = 0.05f;
+        } else if (str.equals("vừa")) {
+            value = 0.1f;
+        } else {
+            value = 0.2f;
+        }
+        return value;
+    }
+
+    public float getSum(JComboBox<String> jcb1, JComboBox<String> jcb2, JComboBox<String> jcb3, JComboBox<String> jcb4,
+            JComboBox<String> jcb5, JComboBox<String> jcb6,
+            JComboBox<String> jcb7, JComboBox<String> jcb8, JComboBox<String> jcb9) {
+        float sum = getValue(jcb1) + getValue(jcb2) + getValue(jcb3) + getValue(jcb4) + getValue(jcb5) + getValue(jcb6)
+                + getValue(jcb7) + getValue(jcb8) + getValue(jcb9);
+        return sum;
+    }
+
+    public float ratio(float sum) {
+        float originalSum = 1;
+        float ratio = originalSum / sum;
+        return ratio;
+    }
+
+    public float editValue(float value) {
+        float newValue = value * ratio(getSum(jComboBox2, jComboBox3, jComboBox4, jComboBox5, jComboBox6,
+                jComboBox7, jComboBox8, jComboBox9, jComboBox10));
+        System.out.println("value = " + newValue);
+        return newValue;
+    }
+
+    public float getNewSum(float value1, float value2, float value3, float value4, float value5, float value6,
+            float value7, float value8, float value9) {
+        float newSum = value1 + value2 + value3 + value4 + value5 + value6 + value7 + value8 + value9;
+        System.out.println("newSum = " + newSum);
+        return newSum;
+    }
+
+    public void process_Danhgia_Trongso() {
+        mang_diem_DG = new int[n][9];
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < 9; j++) {
                 if (jTable1.getValueAt(i, j + 2) != null) {
@@ -1011,7 +1194,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 }
             }
         }
-        
 //        trong_so = new Vector();
 //        Info_trongso info_trongso = new Info_trongso();
 //        info_trongso.h1 = Float.valueOf(jTable2.getValueAt(0, 1).toString());
@@ -1024,110 +1206,126 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
 //        info_trongso.h8 = Float.valueOf(jTable2.getValueAt(0, 8).toString());
 //        info_trongso.h9 = Float.valueOf(jTable2.getValueAt(0, 9).toString());
 //        trong_so.add(info_trongso);
-        
         mang_Trongso = new float[9];
+        mang_Trongso[0] = editValue(getValue(jComboBox2));
+        mang_Trongso[1] = editValue(getValue(jComboBox3));
+        mang_Trongso[2] = editValue(getValue(jComboBox4));
+        mang_Trongso[3] = editValue(getValue(jComboBox5));
+        mang_Trongso[4] = editValue(getValue(jComboBox6));
+        mang_Trongso[5] = editValue(getValue(jComboBox7));
+        mang_Trongso[6] = editValue(getValue(jComboBox8));
+        mang_Trongso[7] = editValue(getValue(jComboBox9));
+        mang_Trongso[8] = editValue(getValue(jComboBox10));
+
         
-        for (int i = 1; i < 10; i++) {
-        mang_Trongso[i-1]= Float.valueOf(jTable2.getValueAt(0, i).toString());
-        }
-       
-        tong_trongso = 0;
-        
-        for(int i = 0; i<9;i++){
-            tong_trongso += mang_Trongso[i];
-        }
+//        for (int i = 1; i < 10; i++) {
+//            mang_Trongso[i - 1] = Float.valueOf(jTable2.getValueAt(0, i).toString());
+//        }
+
+        tong_trongso = getNewSum(
+                editValue(getValue(jComboBox2)),
+                editValue(getValue(jComboBox3)),
+                editValue(getValue(jComboBox4)),
+                editValue(getValue(jComboBox5)),
+                editValue(getValue(jComboBox6)),
+                editValue(getValue(jComboBox7)),
+                editValue(getValue(jComboBox8)),
+                editValue(getValue(jComboBox9)),
+                editValue(getValue(jComboBox10))
+        );
+        if(tong_trongso > 0.99) tong_trongso = 1;
+//        for (int i = 0; i < 9; i++) {
+//            tong_trongso += mang_Trongso[i];
+//        }
     }
-    
-    
+
     // Chuc nang xep hang danh gia cua chuyen gia
-    public void pickCG(){       
-        if(n>1){
+    public void pickCG() {
+        if (n > 1) {
             process_TOPSIS(mang_diem_DG, mang_Trongso);
-        }else{      
+        } else {
             diem_danhgia = new Vector();
             Info_Danhgia info = new Info_Danhgia();
-                info.name = jTable1.getValueAt(0, 1).toString();
-                info.x1 = Integer.valueOf(jTable1.getValueAt(0, 2).toString());
-                info.x2 = Integer.valueOf(jTable1.getValueAt(0, 3).toString());
-                info.x3 = Integer.valueOf(jTable1.getValueAt(0, 4).toString());
-                info.x4 = Integer.valueOf(jTable1.getValueAt(0, 5).toString());
-                info.x5 = Integer.valueOf(jTable1.getValueAt(0, 6).toString());
-                info.x6 = Integer.valueOf(jTable1.getValueAt(0, 7).toString());
-                info.x7 = Integer.valueOf(jTable1.getValueAt(0, 8).toString());
-                info.x8 = Integer.valueOf(jTable1.getValueAt(0, 9).toString());
-                info.x9 = Integer.valueOf(jTable1.getValueAt(0, 10).toString());
-                info.danh_gia = 0;
+            info.name = jTable1.getValueAt(0, 1).toString();
+            info.x1 = Integer.valueOf(jTable1.getValueAt(0, 2).toString());
+            info.x2 = Integer.valueOf(jTable1.getValueAt(0, 3).toString());
+            info.x3 = Integer.valueOf(jTable1.getValueAt(0, 4).toString());
+            info.x4 = Integer.valueOf(jTable1.getValueAt(0, 5).toString());
+            info.x5 = Integer.valueOf(jTable1.getValueAt(0, 6).toString());
+            info.x6 = Integer.valueOf(jTable1.getValueAt(0, 7).toString());
+            info.x7 = Integer.valueOf(jTable1.getValueAt(0, 8).toString());
+            info.x8 = Integer.valueOf(jTable1.getValueAt(0, 9).toString());
+            info.x9 = Integer.valueOf(jTable1.getValueAt(0, 10).toString());
+            info.danh_gia = 0;
             diem_danhgia.add(info);
         }
     }
-    
+
     //Cai dat thuat toan TOPSIS
-    public void process_TOPSIS(int[][] mang_diem, float[] trongSo){
-        
+    public void process_TOPSIS(int[][] mang_diem, float[] trongSo) {
+
         double[] temp = new double[9];
-        for(int j =0; j<9;j++){
+        for (int j = 0; j < 9; j++) {
             int tong = 0;
-            for(int i =0; i<n; i++){
+            for (int i = 0; i < n; i++) {
                 int S = 0;
-                S = mang_diem[i][j]*mang_diem[i][j];
+                S = mang_diem[i][j] * mang_diem[i][j];
                 tong += S;
             }
-            temp[j]= (double) Math.sqrt(tong);
+            temp[j] = (double) Math.sqrt(tong);
         }
-        
+
         // Tinh r
-        float[][] temp_r = new float[n][9];   
+        float[][] temp_r = new float[n][9];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < 9; j++) {
-                temp_r[i][j] = (float) (mang_diem[i][j]/temp[j]);
-            }       
+                temp_r[i][j] = (float) (mang_diem[i][j] / temp[j]);
+            }
         }
-        
+
         // Tinh v
         float[][] temp_v = new float[n][9];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < 9; j++) {
-                temp_v[i][j] = temp_r[i][j]*trongSo[j];
-            }       
+                temp_v[i][j] = temp_r[i][j] * trongSo[j];
+            }
         }
-        
-        
+
         // Tinh A*
         float[] temp_A = new float[9];
         for (int j = 0; j < 9; j++) {
             float max = temp_v[0][j];
             for (int i = 1; i < n; i++) {
-                if(temp_v[i][j] >= max){
+                if (temp_v[i][j] >= max) {
                     max = temp_v[i][j];
-                } 
-            
+                }
+
             }
-            temp_A[j]=max;
+            temp_A[j] = max;
         }
-      
-        
+
         // Tinh A-
         float[] temp_A1 = new float[9];
         for (int j = 0; j < 9; j++) {
             float min = temp_v[0][j];
             for (int i = 1; i < n; i++) {
-                if(temp_v[i][j] <= min){
+                if (temp_v[i][j] <= min) {
                     min = temp_v[i][j];
                 }
             }
-            temp_A1[j]=min;
+            temp_A1[j] = min;
         }
-        
+
         //Tinh S*
         float[][] temp_S_tg = new float[n][9];
         for (int j = 0; j < 9; j++) {
             for (int i = 0; i < n; i++) {
-                temp_S_tg[i][j] = (temp_v[i][j]-temp_A[j])*(temp_v[i][j]-temp_A[j]);
-            }          
+                temp_S_tg[i][j] = (temp_v[i][j] - temp_A[j]) * (temp_v[i][j] - temp_A[j]);
+            }
         }
-        
+
         float[] temp_S = new float[n];
-        
+
         for (int i = 0; i < n; i++) {
             float tong = 0;
             for (int j = 0; j < 9; j++) {
@@ -1135,17 +1333,17 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             }
             temp_S[i] = (float) Math.sqrt(tong);
         }
-        
+
         //Tinh S-
-         float[][] temp_S1_tg = new float[n][9];
+        float[][] temp_S1_tg = new float[n][9];
         for (int j = 0; j < 9; j++) {
             for (int i = 0; i < n; i++) {
-                temp_S1_tg[i][j] = (temp_v[i][j]-temp_A1[j])*(temp_v[i][j]-temp_A1[j]);
-            }          
+                temp_S1_tg[i][j] = (temp_v[i][j] - temp_A1[j]) * (temp_v[i][j] - temp_A1[j]);
+            }
         }
-        
+
         float[] temp_S1 = new float[n];
-        
+
         for (int i = 0; i < n; i++) {
             float tong = 0;
             for (int j = 0; j < 9; j++) {
@@ -1153,77 +1351,74 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             }
             temp_S1[i] = (float) Math.sqrt(tong);
         }
-        
-        //Tinh C*
-        double value =0;
-        DecimalFormat df = new DecimalFormat("0.0000");
 
+        //Tinh C*
+        double value = 0;
+        DecimalFormat df = new DecimalFormat("0.0000");
 
         temp_C = new float[n];
         for (int i = 0; i < n; i++) {
-            value = temp_S1[i]/(temp_S[i]+temp_S1[i]);
+            value = temp_S1[i] / (temp_S[i] + temp_S1[i]);
             String str_tg = df.format(value);
-            temp_C[i] = Float.valueOf(str_tg) ;
+            temp_C[i] = Float.valueOf(str_tg);
         }
-      
-          diem_danhgia = new Vector();
-        for(int i =0; i<n; i++){
+
+        diem_danhgia = new Vector();
+        for (int i = 0; i < n; i++) {
             Info_Danhgia info = new Info_Danhgia();
-                info.name = jTable1.getValueAt(i, 1).toString();
-                info.x1 = Integer.valueOf(jTable1.getValueAt(i, 2).toString());
-                info.x2 = Integer.valueOf(jTable1.getValueAt(i, 3).toString());
-                info.x3 = Integer.valueOf(jTable1.getValueAt(i, 4).toString());
-                info.x4 = Integer.valueOf(jTable1.getValueAt(i, 5).toString());
-                info.x5 = Integer.valueOf(jTable1.getValueAt(i, 6).toString());
-                info.x6 = Integer.valueOf(jTable1.getValueAt(i, 7).toString());
-                info.x7 = Integer.valueOf(jTable1.getValueAt(i, 8).toString());
-                info.x8 = Integer.valueOf(jTable1.getValueAt(i, 9).toString());
-                info.x9 = Integer.valueOf(jTable1.getValueAt(i, 10).toString());
-                info.danh_gia = temp_C[i];
+            info.name = jTable1.getValueAt(i, 1).toString();
+            info.x1 = Integer.valueOf(jTable1.getValueAt(i, 2).toString());
+            info.x2 = Integer.valueOf(jTable1.getValueAt(i, 3).toString());
+            info.x3 = Integer.valueOf(jTable1.getValueAt(i, 4).toString());
+            info.x4 = Integer.valueOf(jTable1.getValueAt(i, 5).toString());
+            info.x5 = Integer.valueOf(jTable1.getValueAt(i, 6).toString());
+            info.x6 = Integer.valueOf(jTable1.getValueAt(i, 7).toString());
+            info.x7 = Integer.valueOf(jTable1.getValueAt(i, 8).toString());
+            info.x8 = Integer.valueOf(jTable1.getValueAt(i, 9).toString());
+            info.x9 = Integer.valueOf(jTable1.getValueAt(i, 10).toString());
+            info.danh_gia = temp_C[i];
             diem_danhgia.add(info);
         }
     }
-    
+
     // Sap xep du lieu danh gia cua chuyen gia tu nho den lon
-    public void sap_Xep(){
-        
+    public void sap_Xep() {
         Info_Danhgia temp = new Info_Danhgia();
-        
-        for(int i=0; i<diem_danhgia.size(); i++){ 
-            for(int j=0; j<=i; j++){
-                if(((Info_Danhgia) diem_danhgia.elementAt(i)).danh_gia <=((Info_Danhgia) diem_danhgia.elementAt(j)).danh_gia){            
+
+        for (int i = 0; i < diem_danhgia.size(); i++) {
+            for (int j = 0; j <= i; j++) {
+                if (((Info_Danhgia) diem_danhgia.elementAt(i)).danh_gia <= ((Info_Danhgia) diem_danhgia.elementAt(j)).danh_gia) {
                     temp = (Info_Danhgia) diem_danhgia.elementAt(i);
-                    diem_danhgia.setElementAt((Info_Danhgia) diem_danhgia.elementAt(j),i);
-                    diem_danhgia.setElementAt(temp,j);
+                    diem_danhgia.setElementAt((Info_Danhgia) diem_danhgia.elementAt(j), i);
+                    diem_danhgia.setElementAt(temp, j);
                 }
             }
         }
     }
-    
+
     //Danh gia truyen thong khong trong so
     public void process_DG_TT() {
         danhgia_tt = new float[9];
-        
+
         for (int j = 0; j < 9; j++) {
             int tong = 0;
             for (int i = 0; i < n; i++) {
                 tong += mang_diem_DG[i][j];
             }
-            danhgia_tt[j] = (float) tong/n;
+            danhgia_tt[j] = (float) tong / n;
         }
     }
-    
+
     // Hien thi bang xep hang danh gia cua chuyen gia
-    public void input_table3(){
-             Object[][] oj = new Object[n][12];
-           
+    public void input_table3() {
+        Object[][] oj = new Object[n][12];
+
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
                 oj,
                 new String[]{
                     "TT", "Tên", "X1", "X2", "X3", "X4", "X5", "X6", "X7", "X8", "X9", "Độ tích cực"
                 }) {
 
-           
             boolean[] canEdit = new boolean[]{
                 false, false, false, false, false, false, false, false, false, false, false, false, false
             };
@@ -1249,25 +1444,24 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jTable3.getColumnModel().getColumn(10).setResizable(false);
         jTable3.getColumnModel().getColumn(11).setResizable(false);
         jTable3.getColumnModel().getColumn(11).setPreferredWidth(150);
-        
-        for (int i = 0; i < n; i++) {        
-                jTable3.setValueAt(i, i, 0);
-                jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).name,i,1);
-                jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x1,i,2);
-                jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x2,i,3);
-                jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x3,i,4);
-                jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x4,i,5);
-                jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x5,i,6);
-                jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x6,i,7);
-                jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x7,i,8);
-                jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x8,i,9);
-                jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x9,i,10);
-                jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).danh_gia,i,11);
+
+        for (int i = 0; i < n; i++) {
+            jTable3.setValueAt(i, i, 0);
+            jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).name, i, 1);
+            jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x1, i, 2);
+            jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x2, i, 3);
+            jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x3, i, 4);
+            jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x4, i, 5);
+            jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x5, i, 6);
+            jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x6, i, 7);
+            jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x7, i, 8);
+            jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x8, i, 9);
+            jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).x9, i, 10);
+            jTable3.setValueAt(((Info_Danhgia) diem_danhgia.elementAt(i)).danh_gia, i, 11);
         }
     }
 
     //----------------------- DANH GIA VA TU VAN -------------------------------
-    
     public String[] danhgia_Tuvan(float[] chose_danhgia) throws SQLException {
 
         // Chon chuyen gia co danh gia phu hop
@@ -1276,25 +1470,20 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
 //            for (int i = 0; i < 9; i++) {
 //                chose_danhgia[i] = Integer.valueOf(jTable3.getValueAt(row_select,i+2).toString());
 //            }    
-
         String[] str_final = new String[2];
         //Danh gia chat luong bai giang
         float danhgia = 0;              //gia tri danh gia bai giang    S=Xi*hi
         int ma_sk_danhgia = 0;
         int can_duoi = 0;
         int dem = 1;
-        
-       
 
         for (int i = 0; i < chose_danhgia.length; i++) {
             float tg = chose_danhgia[i] * mang_Trongso[i];
             danhgia += tg;
         }
-        
         DecimalFormat df = new DecimalFormat("0.0000");
         String str = df.format(danhgia);
         danhgia = Float.valueOf(str);
-        
         if ((1 <= danhgia) && (2 >= danhgia)) {
             str_final[0] = "Yếu";
 //            jLabel3.setText("Yếu");
@@ -1304,20 +1493,17 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             str_final[0] = "Trung bình";
 //            jLabel3.setText("Trung bình");
             ma_sk_danhgia = 2;
-        }
-        if ((4 < danhgia) && (6 >= danhgia)) {
+        } else if ((4 < danhgia) && (6 >= danhgia)) {
             str_final[0] = "Khá";
 //            jLabel3.setText("Khá");
             can_duoi = 4;
             ma_sk_danhgia = 3;
-        }
-        if ((6 < danhgia) && (8 >= danhgia)) {
+        } else if ((6 < danhgia) && (8 >= danhgia)) {
             str_final[0] = "Tốt";
 //            jLabel3.setText("Tốt");
             can_duoi = 6;
             ma_sk_danhgia = 4;
-        }
-        if ((8 < danhgia) && (9 >= danhgia)) {
+        } else if ((8 < danhgia) && (9 >= danhgia)) {
             str_final[0] = "Rất tốt";
 //            jLabel3.setText("Rất tốt");
             can_duoi = 8;
@@ -1367,9 +1553,8 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
 
         }
 
-
         // Danh gia tren trung binh va co tieu chi < can duoi           
-        if ((4 < danhgia) && (dem > 1)) {
+        if ((danhgia > 4) && (dem > 1)) {
             ma_sk_danhgia = 6;
         }
 
@@ -1390,7 +1575,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             }
         }
 
-
         if ((ma_sk_danhgia > 2) && (ma_sk_danhgia < 6)) {
             mang_tuvan[0] = 6;
             for (int i = 1; i < mang_tuvan.length; i++) {
@@ -1398,17 +1582,16 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             }
         }
 
-        int t = mang_tuvan.length;
-
         //Danh gia thieu sot cua bai giang
         String[] mang_dk_tv;                // mang dieu kien danh gia thieu sot
         String str_tb = new String();
-
+        System.out.println(ma_sk_danhgia);
         if (danhgia <= 4) {
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT ID_IF From [Rules_ Error] Where ID_THEN ='" + ma_sk_danhgia + "'");
             while (rs.next()) {
                 str_tb = rs.getString("ID_IF");
+                System.out.println(str_tb);
             }
             mang_dk_tv = str_tb.split(",");
         } else {
@@ -1444,6 +1627,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             ResultSet rs = stmt.executeQuery("SELECT ID_THEN From [Rules_ Advisory] Where ID_IF ='" + mang_dk_tv[i] + "'");
             while (rs.next()) {
                 mang_tv[i] = rs.getString("ID_THEN");
+                System.out.println("mtv = " + mang_tv[i]);
             }
         }
 
@@ -1515,35 +1699,34 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }
-    
-    
-    public static void set_Table1 (Object[][] oj_lesson){
+
+    public static void set_Table1(Object[][] oj_lesson) {
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            oj_lesson,
-            new String [] {
-                "TT", "Tên", "X1", "X2", "X3", "X4", "X5", "X6", "X7", "X8", "X9"
-            }
-        ){
-             Class[] types = new Class[]{
-                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
-             };
-             boolean[] canEdit = new boolean[]{
-                 false, false, true, true, true, true, true, true, true, true, true, true
-             };
+                oj_lesson,
+                new String[]{
+                    "TT", "Tên", "X1", "X2", "X3", "X4", "X5", "X6", "X7", "X8", "X9"
+                }
+        ) {
+            Class[] types = new Class[]{
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean[]{
+                false, false, true, true, true, true, true, true, true, true, true, true
+            };
 
-             public Class getColumnClass(int columnIndex) {
-                 return types[columnIndex];
-             }
-
-             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                 return canEdit[columnIndex];
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
             }
-            
-        });       
-            jTable1.setCellSelectionEnabled(true); 
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+
+        });
+        jTable1.setCellSelectionEnabled(true);
 //            jTable1.setRowSelectionAllowed(true);
-            jTable1.setDefaultEditor(Integer.class,
-                               new IntegerEditor(1, 9));
+        jTable1.setDefaultEditor(Integer.class,
+                new IntegerEditor(1, 9));
 
         jScrollPane1.setViewportView(jTable1);
         jTable1.getColumnModel().getColumn(0).setResizable(false);
@@ -1560,14 +1743,14 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jTable1.getColumnModel().getColumn(9).setResizable(false);
         jTable1.getColumnModel().getColumn(10).setResizable(false);
     }
-    
-    public void show_Danhgia(int x){
+
+    public void show_Danhgia(int x) {
         try {
             vt_rating = new Vector();
-            String str="Select X1,X2,X3,X4,X5,X6,X7,X8,X9 From Lesson, Rating where Lesson.ID_Lesson = Rating.ID_Lesson and Lesson.ID_Lesson="+x;
+            String str = "Select X1,X2,X3,X4,X5,X6,X7,X8,X9 From Lesson, Rating where Lesson.ID_Lesson = Rating.ID_Lesson and Lesson.ID_Lesson=" + x;
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(str);
-            while (rs.next()) {                
+            while (rs.next()) {
                 Info_Rating info_Rating = new Info_Rating();
                 info_Rating.x1 = rs.getInt(1);
                 info_Rating.x2 = rs.getInt(2);
@@ -1580,7 +1763,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 info_Rating.x9 = rs.getInt(9);
                 vt_rating.add(info_Rating);
             }
-            
+
             oj_lesson = new Object[vt_rating.size()][11];
             for (int i = 0; i < Danhgia_Tuvan.vt_rating.size(); i++) {
                 oj_lesson[i][0] = i + 1;
@@ -1594,7 +1777,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 oj_lesson[i][8] = ((Info_Rating) vt_rating.elementAt(i)).x7;
                 oj_lesson[i][9] = ((Info_Rating) vt_rating.elementAt(i)).x8;
                 oj_lesson[i][10] = ((Info_Rating) vt_rating.elementAt(i)).x9;
-                
+
             }
             set_Table1(oj_lesson);
             Danhgia_Tuvan.jSpinner1.setModel(new javax.swing.SpinnerNumberModel(vt_rating.size(), vt_rating.size(), null, Integer.valueOf(1)));
@@ -1602,11 +1785,11 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             Logger.getLogger(Danhgia_Tuvan.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    public void update_Rating(){
-        int x = ((Info_Lesson)vt_chose_lesson.elementAt(0)).ID_lesson;
+
+    public void update_Rating() {
+        int x = ((Info_Lesson) vt_chose_lesson.elementAt(0)).ID_lesson;
         try {
-            String str_1 = "Delete From Rating where ID_Lesson="+x;
+            String str_1 = "Delete From Rating where ID_Lesson=" + x;
             PreparedStatement ptsmt = con.prepareCall(str_1);
             ptsmt.execute();
             con.commit();
@@ -1617,7 +1800,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             con.setAutoCommit(false);
             stmt = con.createStatement();
             for (int i = 0; i < jTable1.getRowCount(); i++) {
-                stmt.addBatch("Insert Rating Values("+x+","+jTable1.getValueAt(i,2)+","+jTable1.getValueAt(i,3)+","+jTable1.getValueAt(i,4)+","+jTable1.getValueAt(i,5)+","+jTable1.getValueAt(i,6)+","+jTable1.getValueAt(i,7)+","+jTable1.getValueAt(i,8)+","+jTable1.getValueAt(i,9)+","+jTable1.getValueAt(i,10)+")");
+                stmt.addBatch("Insert Rating Values(" + x + "," + jTable1.getValueAt(i, 2) + "," + jTable1.getValueAt(i, 3) + "," + jTable1.getValueAt(i, 4) + "," + jTable1.getValueAt(i, 5) + "," + jTable1.getValueAt(i, 6) + "," + jTable1.getValueAt(i, 7) + "," + jTable1.getValueAt(i, 8) + "," + jTable1.getValueAt(i, 9) + "," + jTable1.getValueAt(i, 10) + ")");
             }
             stmt.executeBatch();
             con.commit();
@@ -1625,17 +1808,15 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             Logger.getLogger(Danhgia_Tuvan.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-      public void sendMail(String mail,String nameLesson, String final_Tuvan){
-        try {
-         
-            SendMail.send("smtp.gmail.com", mail, "quang8490@gmail.com", "maiyeuanh2", nameLesson, final_Tuvan);
-            JOptionPane jo = new JOptionPane("Thông báo");
-            jo.showMessageDialog(this, "Gửi mail thành công!");
-        } catch (Exception ex) {
-            Logger.getLogger(Danhgia_Tuvan.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    
-}
 
+//    public void sendMail(String mail, String nameLesson, String final_Tuvan) {
+//        try {
+//
+//            test.send("smtp.gmail.com", mail, "quang8490@gmail.com", "maiyeuanh2", nameLesson, final_Tuvan);
+//            JOptionPane jo = new JOptionPane("Thông báo");
+//            jo.showMessageDialog(this, "Gửi mail thành công!");
+//        } catch (Exception ex) {
+//            Logger.getLogger(Danhgia_Tuvan.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
+}

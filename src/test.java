@@ -15,7 +15,7 @@ import javax.mail.internet.MimeMessage;
  *
  * @author Tran Huy
  */
-public class SendMail {
+public class test {
 
     public static void send(String smtpServer, String to, String from, String psw,
             String subject, String body) throws Exception {
