@@ -380,7 +380,6 @@ public class Chose_Lesson extends javax.swing.JFrame {
             jo.showMessageDialog(this, "Gặp lỗi kết nối CSDL");
             Logger.getLogger(Danhgia_Tuvan.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println("aaaaaaaaaaaaaaaa");
     }
     
     private void Set_table(Object[][] oj_table){

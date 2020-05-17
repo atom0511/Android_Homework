@@ -1,7 +1,13 @@
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.sql.*;
@@ -10,8 +16,18 @@ import java.util.Scanner;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.table.TableColumn;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.title.TextTitle;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.text.TextUtilities;
+import org.jfree.ui.RectangleEdge;
+import org.jfree.ui.TextAnchor;
 
 /*
  * To change this template, choose Tools | Templates
@@ -42,6 +58,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     Chose_Lesson chose_lesson;
     public static Vector vt_rating, vt_chose_lesson;
     public String body_mail;
+    public Boolean isExistBarchart = false;
 
     /**
      * Creates new form Danhgia_Tuvan
@@ -120,6 +137,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -134,8 +152,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jPanel12 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
-        jPanel15 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -515,19 +531,27 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setText("Biểu đồ");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 641, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(304, 304, 304)
-                        .addComponent(jButton4)))
+                .addGap(38, 38, 38)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 641, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGap(161, 161, 161)
+                .addComponent(jButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(197, 197, 197))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -535,7 +559,9 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
-                .addComponent(jButton4)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton4)
+                    .addComponent(jButton5))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -553,7 +579,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(276, Short.MAX_VALUE))
+                .addContainerGap(245, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Xếp hạng chuyên gia", jPanel2);
@@ -615,7 +641,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -624,7 +650,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Đánh giá và tư vấn", jPanel3);
@@ -695,25 +721,10 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Đánh giá truyền thống", jPanel10);
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 844, Short.MAX_VALUE)
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
-        );
-
-        jTabbedPane2.addTab("tab1", jPanel15);
-
-        jTabbedPane1.addTab("Biểu đồ biểu diễn đánh giá", jTabbedPane2);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -727,11 +738,13 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, Short.MAX_VALUE)
         );
 
         pack();
@@ -975,6 +988,15 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        if (isExistBarchart == false) {
+            isExistBarchart = true;
+            creatBarchart(jTable3);
+        }
+
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1012,6 +1034,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -1040,7 +1063,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1067,7 +1089,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane9;
     public static javax.swing.JSpinner jSpinner1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
     public static javax.swing.JTable jTable1;
     private javax.swing.JTable jTable3;
     private javax.swing.JTextArea jTextArea1;
@@ -1171,14 +1192,12 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     public float editValue(float value) {
         float newValue = value * ratio(getSum(jComboBox2, jComboBox3, jComboBox4, jComboBox5, jComboBox6,
                 jComboBox7, jComboBox8, jComboBox9, jComboBox10));
-        System.out.println("value = " + newValue);
         return newValue;
     }
 
     public float getNewSum(float value1, float value2, float value3, float value4, float value5, float value6,
             float value7, float value8, float value9) {
         float newSum = value1 + value2 + value3 + value4 + value5 + value6 + value7 + value8 + value9;
-        System.out.println("newSum = " + newSum);
         return newSum;
     }
 
@@ -1217,11 +1236,9 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         mang_Trongso[7] = editValue(getValue(jComboBox9));
         mang_Trongso[8] = editValue(getValue(jComboBox10));
 
-        
 //        for (int i = 1; i < 10; i++) {
 //            mang_Trongso[i - 1] = Float.valueOf(jTable2.getValueAt(0, i).toString());
 //        }
-
         tong_trongso = getNewSum(
                 editValue(getValue(jComboBox2)),
                 editValue(getValue(jComboBox3)),
@@ -1233,7 +1250,9 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 editValue(getValue(jComboBox9)),
                 editValue(getValue(jComboBox10))
         );
-        if(tong_trongso > 0.99) tong_trongso = 1;
+        if (tong_trongso > 0.99) {
+            tong_trongso = 1;
+        }
 //        for (int i = 0; i < 9; i++) {
 //            tong_trongso += mang_Trongso[i];
 //        }
@@ -1393,6 +1412,55 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                     diem_danhgia.setElementAt(temp, j);
                 }
             }
+        }
+    }
+
+    // Hien thi bieu do chat luong danh gia voi toi da 5 chuyen gia
+    public float[] getPositivity(JTable jTable) {
+        int[] selectedRow = jTable.getSelectedRows();
+        float[] pos = new float[selectedRow.length];
+        for (int i = 0; i < selectedRow.length; i++) {
+            pos[i] = Float.parseFloat(jTable.getValueAt(selectedRow[i], 11).toString());
+            System.out.println("pos[" + i + "]= " + pos[i]);
+        }
+        return pos;
+    }
+
+    private void creatBarchart(JTable jTable) {
+        float pos[] = getPositivity(jTable);
+        if (pos.length == 0) {
+            JOptionPane jo = new JOptionPane("Thông báo");
+            jo.showMessageDialog(this, "Bạn chưa chọn chuyên gia để đánh giá");
+        } else {
+            DefaultCategoryDataset dataSet = new DefaultCategoryDataset();
+            for (int i = 0; i < pos.length; i++) {
+                dataSet.setValue(pos[i], "Độ tích cực", "Chuyên gia " + (i + 1));
+                if (i == 4) {
+                    break;
+                }
+            }
+            JFreeChart chart = ChartFactory.createBarChart("Độ tích cực trong đánh giá của chuyên gia", "", "Ghi chú", dataSet);
+            CategoryPlot p = chart.getCategoryPlot();
+            p.setRangeGridlinePaint(Color.BLACK);
+            p.getRangeAxis().setUpperBound(1.0);
+            ChartFrame frame = new ChartFrame("Biểu đồ độ tích cực", chart);
+            frame.setVisible(true);
+            frame.setSize(800, 600);
+            frame.setLocationRelativeTo(null);
+            JPanel jPanel = new JPanel();
+            JLabel jL = new JLabel();
+            jL.setText("ahglagsldkag");
+            jPanel.setBackground(Color.yellow);
+            jPanel.setBounds(100, 100, 1000, 1000);
+            frame.add(jL);
+            frame.addWindowListener(new WindowAdapter() {
+                @Override
+                public void windowClosing(WindowEvent we) {
+                    super.windowClosing(we); //To change body of generated methods, choose Tools | Templates.
+                    isExistBarchart = false;
+                }
+            });
+
         }
     }
 
@@ -1585,13 +1653,11 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         //Danh gia thieu sot cua bai giang
         String[] mang_dk_tv;                // mang dieu kien danh gia thieu sot
         String str_tb = new String();
-        System.out.println(ma_sk_danhgia);
         if (danhgia <= 4) {
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT ID_IF From [Rules_ Error] Where ID_THEN ='" + ma_sk_danhgia + "'");
             while (rs.next()) {
                 str_tb = rs.getString("ID_IF");
-                System.out.println(str_tb);
             }
             mang_dk_tv = str_tb.split(",");
         } else {
@@ -1627,7 +1693,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             ResultSet rs = stmt.executeQuery("SELECT ID_THEN From [Rules_ Advisory] Where ID_IF ='" + mang_dk_tv[i] + "'");
             while (rs.next()) {
                 mang_tv[i] = rs.getString("ID_THEN");
-                System.out.println("mtv = " + mang_tv[i]);
             }
         }
 
@@ -1685,7 +1750,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             String str_tg = "";
             //kiem tra xem co doc duoc khong roi in ra :
             while ((str = br.readLine()) != null) {
-                System.out.println(str);
                 str_tg += str;
             }
             String[] config = str_tg.split(";");
