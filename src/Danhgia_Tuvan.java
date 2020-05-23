@@ -21,6 +21,7 @@ import javax.swing.*;
 import javax.swing.table.TableColumn;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
+import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.title.TextTitle;
@@ -120,6 +121,19 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jTextPane9 = new javax.swing.JTextPane();
         jScrollPane16 = new javax.swing.JScrollPane();
         jTextPane11 = new javax.swing.JTextPane();
+        jScrollPane17 = new javax.swing.JScrollPane();
+        jTextPane12 = new javax.swing.JTextPane();
+        jComboBox11 = new javax.swing.JComboBox<>();
+        jComboBox12 = new javax.swing.JComboBox<>();
+        jComboBox13 = new javax.swing.JComboBox<>();
+        jComboBox14 = new javax.swing.JComboBox<>();
+        jComboBox15 = new javax.swing.JComboBox<>();
+        jComboBox16 = new javax.swing.JComboBox<>();
+        jComboBox17 = new javax.swing.JComboBox<>();
+        jComboBox18 = new javax.swing.JComboBox<>();
+        jComboBox10 = new javax.swing.JComboBox<>();
+        jButton3 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         jComboBox4 = new javax.swing.JComboBox<>();
@@ -128,10 +142,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jComboBox7 = new javax.swing.JComboBox<>();
         jComboBox8 = new javax.swing.JComboBox<>();
         jComboBox9 = new javax.swing.JComboBox<>();
-        jComboBox10 = new javax.swing.JComboBox<>();
-        jScrollPane17 = new javax.swing.JScrollPane();
-        jTextPane12 = new javax.swing.JTextPane();
-        jButton3 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -260,8 +270,8 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                                 .addComponent(jLabel9))))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(117, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 678, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -319,31 +329,49 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         jTextPane11.setText("H9");
         jScrollPane16.setViewportView(jTextPane11);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
-
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
-
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
-
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
-
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
-
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
-
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
-
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "vừa", "rất" }));
-
         jTextPane12.setText("Độ quan trọng");
         jScrollPane17.setViewportView(jTextPane12);
+
+        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "rất", "khá", "hơi" }));
+        jComboBox11.setLightWeightPopupEnabled(false);
+        jComboBox11.setMinimumSize(new java.awt.Dimension(58, 22));
+        jComboBox11.setPreferredSize(new java.awt.Dimension(58, 22));
+
+        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "rất", "khá", "hơi" }));
+        jComboBox12.setLightWeightPopupEnabled(false);
+        jComboBox12.setMinimumSize(new java.awt.Dimension(58, 22));
+        jComboBox12.setPreferredSize(new java.awt.Dimension(58, 22));
+
+        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "rất", "khá", "hơi" }));
+        jComboBox13.setLightWeightPopupEnabled(false);
+        jComboBox13.setMinimumSize(new java.awt.Dimension(58, 22));
+        jComboBox13.setPreferredSize(new java.awt.Dimension(58, 22));
+
+        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "rất", "khá", "hơi" }));
+        jComboBox14.setLightWeightPopupEnabled(false);
+        jComboBox14.setMinimumSize(new java.awt.Dimension(58, 22));
+        jComboBox14.setPreferredSize(new java.awt.Dimension(58, 22));
+
+        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "rất", "khá", "hơi" }));
+        jComboBox15.setLightWeightPopupEnabled(false);
+        jComboBox15.setMinimumSize(new java.awt.Dimension(58, 22));
+        jComboBox15.setPreferredSize(new java.awt.Dimension(58, 22));
+
+        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "rất", "khá", "hơi" }));
+        jComboBox16.setLightWeightPopupEnabled(false);
+        jComboBox16.setMinimumSize(new java.awt.Dimension(58, 22));
+        jComboBox16.setPreferredSize(new java.awt.Dimension(58, 22));
+
+        jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "rất", "khá", "hơi" }));
+        jComboBox17.setLightWeightPopupEnabled(false);
+        jComboBox17.setMinimumSize(new java.awt.Dimension(58, 22));
+        jComboBox17.setPreferredSize(new java.awt.Dimension(58, 22));
+
+        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "rất", "khá", "hơi" }));
+        jComboBox18.setLightWeightPopupEnabled(false);
+        jComboBox18.setMinimumSize(new java.awt.Dimension(58, 22));
+
+        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "rất", "khá", "hơi" }));
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -356,39 +384,42 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane7)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox10, 0, 58, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane8)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane9)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane10)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane11)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane12)
-                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane13)
-                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane14)
-                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jComboBox10, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -407,14 +438,14 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
@@ -431,6 +462,24 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             }
         });
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "nhiều" }));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "nhiều" }));
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "nhiều" }));
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "nhiều" }));
+
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "nhiều" }));
+
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "nhiều" }));
+
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "nhiều" }));
+
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "nhiều" }));
+
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ít", "nhiều" }));
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -441,8 +490,27 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(231, 231, 231)
-                        .addComponent(jButton3)))
+                        .addGap(116, 116, 116)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton3)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -450,9 +518,20 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
                 .addComponent(jButton3)
-                .addGap(254, 254, 254))
+                .addGap(203, 203, 203))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -462,9 +541,9 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -472,8 +551,8 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -483,14 +562,14 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Dữ liệu đánh giá", jPanel1);
@@ -579,7 +658,7 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(245, Short.MAX_VALUE))
+                .addContainerGap(306, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Xếp hạng chuyên gia", jPanel2);
@@ -738,13 +817,11 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 856, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -984,10 +1061,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTable1MousePressed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         if (isExistBarchart == false) {
@@ -1035,7 +1108,16 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
+    private javax.swing.JComboBox<String> jComboBox11;
+    private javax.swing.JComboBox<String> jComboBox12;
+    private javax.swing.JComboBox<String> jComboBox13;
+    private javax.swing.JComboBox<String> jComboBox14;
+    private javax.swing.JComboBox<String> jComboBox15;
+    private javax.swing.JComboBox<String> jComboBox16;
+    private javax.swing.JComboBox<String> jComboBox17;
+    private javax.swing.JComboBox<String> jComboBox18;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
@@ -1162,24 +1244,50 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     }
 
     //Xu li trong so
-    public float getValue(JComboBox<String> jcb) {
-        String str = jcb.getSelectedItem().toString();
-        float value;
-        if (str.equals("ít")) {
-            value = 0.05f;
-        } else if (str.equals("vừa")) {
-            value = 0.1f;
+    public float getValue(JComboBox<String> jcbTinhTu, JComboBox<String> jcbDinhTinh) {
+        String strTinhTu = jcbTinhTu.getSelectedItem().toString();
+        String strDinhTinh = jcbDinhTinh.getSelectedItem().toString();
+
+        float value = 0;
+        if (strTinhTu.equals("ít")) {
+            switch (strDinhTinh) {
+                case "rất":
+                    value = 0.1f;
+                    break;
+                case "khá":
+                    value = 0.25f;
+                    break;
+                case "hơi":
+                    value = 0.4f;
+                    break;
+            }
         } else {
-            value = 0.2f;
+            switch (strDinhTinh) {
+                case "rất":
+                    value = 0.9f;
+                    break;
+                case "khá":
+                    value = 0.75f;
+                    break;
+                case "hơi":
+                    value = 0.6f;
+                    break;
+            }
         }
         return value;
     }
 
-    public float getSum(JComboBox<String> jcb1, JComboBox<String> jcb2, JComboBox<String> jcb3, JComboBox<String> jcb4,
-            JComboBox<String> jcb5, JComboBox<String> jcb6,
-            JComboBox<String> jcb7, JComboBox<String> jcb8, JComboBox<String> jcb9) {
-        float sum = getValue(jcb1) + getValue(jcb2) + getValue(jcb3) + getValue(jcb4) + getValue(jcb5) + getValue(jcb6)
-                + getValue(jcb7) + getValue(jcb8) + getValue(jcb9);
+    public float getSum(
+            JComboBox<String> jcb1, JComboBox<String> jcb2, JComboBox<String> jcb3,
+            JComboBox<String> jcb4, JComboBox<String> jcb5, JComboBox<String> jcb6,
+            JComboBox<String> jcb7, JComboBox<String> jcb8, JComboBox<String> jcb9,
+            JComboBox<String> jcb10, JComboBox<String> jcb11, JComboBox<String> jcb12,
+            JComboBox<String> jcb13, JComboBox<String> jcb14, JComboBox<String> jcb15,
+            JComboBox<String> jcb16, JComboBox<String> jcb17, JComboBox<String> jcb18
+    ) {
+        float sum = getValue(jcb1, jcb10) + getValue(jcb2, jcb11) + getValue(jcb3, jcb12)
+                + getValue(jcb4, jcb13) + getValue(jcb5, jcb14) + getValue(jcb6, jcb15)
+                + getValue(jcb7, jcb16) + getValue(jcb8, jcb17) + getValue(jcb9, jcb18);
         return sum;
     }
 
@@ -1190,8 +1298,12 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
     }
 
     public float editValue(float value) {
-        float newValue = value * ratio(getSum(jComboBox2, jComboBox3, jComboBox4, jComboBox5, jComboBox6,
-                jComboBox7, jComboBox8, jComboBox9, jComboBox10));
+        float newValue = value * ratio(getSum(jComboBox1, jComboBox2, jComboBox3,
+                jComboBox4, jComboBox5, jComboBox6,
+                jComboBox7, jComboBox8, jComboBox9,
+                jComboBox10, jComboBox11, jComboBox12,
+                jComboBox13, jComboBox14, jComboBox15,
+                jComboBox16, jComboBox17, jComboBox18));
         return newValue;
     }
 
@@ -1213,49 +1325,36 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 }
             }
         }
-//        trong_so = new Vector();
-//        Info_trongso info_trongso = new Info_trongso();
-//        info_trongso.h1 = Float.valueOf(jTable2.getValueAt(0, 1).toString());
-//        info_trongso.h2 = Float.valueOf(jTable2.getValueAt(0, 2).toString());
-//        info_trongso.h3 = Float.valueOf(jTable2.getValueAt(0, 3).toString());
-//        info_trongso.h4 = Float.valueOf(jTable2.getValueAt(0, 4).toString());
-//        info_trongso.h5 = Float.valueOf(jTable2.getValueAt(0, 5).toString());
-//        info_trongso.h6 = Float.valueOf(jTable2.getValueAt(0, 6).toString());
-//        info_trongso.h7 = Float.valueOf(jTable2.getValueAt(0, 7).toString());
-//        info_trongso.h8 = Float.valueOf(jTable2.getValueAt(0, 8).toString());
-//        info_trongso.h9 = Float.valueOf(jTable2.getValueAt(0, 9).toString());
-//        trong_so.add(info_trongso);
+
         mang_Trongso = new float[9];
-        mang_Trongso[0] = editValue(getValue(jComboBox2));
-        mang_Trongso[1] = editValue(getValue(jComboBox3));
-        mang_Trongso[2] = editValue(getValue(jComboBox4));
-        mang_Trongso[3] = editValue(getValue(jComboBox5));
-        mang_Trongso[4] = editValue(getValue(jComboBox6));
-        mang_Trongso[5] = editValue(getValue(jComboBox7));
-        mang_Trongso[6] = editValue(getValue(jComboBox8));
-        mang_Trongso[7] = editValue(getValue(jComboBox9));
-        mang_Trongso[8] = editValue(getValue(jComboBox10));
+        mang_Trongso[0] = editValue(getValue(jComboBox1, jComboBox10));
+        mang_Trongso[1] = editValue(getValue(jComboBox2, jComboBox11));
+        mang_Trongso[2] = editValue(getValue(jComboBox3, jComboBox12));
+        mang_Trongso[3] = editValue(getValue(jComboBox4, jComboBox13));
+        mang_Trongso[4] = editValue(getValue(jComboBox5, jComboBox14));
+        mang_Trongso[5] = editValue(getValue(jComboBox6, jComboBox15));
+        mang_Trongso[6] = editValue(getValue(jComboBox7, jComboBox16));
+        mang_Trongso[7] = editValue(getValue(jComboBox8, jComboBox17));
+        mang_Trongso[8] = editValue(getValue(jComboBox9, jComboBox18));
 
 //        for (int i = 1; i < 10; i++) {
 //            mang_Trongso[i - 1] = Float.valueOf(jTable2.getValueAt(0, i).toString());
 //        }
         tong_trongso = getNewSum(
-                editValue(getValue(jComboBox2)),
-                editValue(getValue(jComboBox3)),
-                editValue(getValue(jComboBox4)),
-                editValue(getValue(jComboBox5)),
-                editValue(getValue(jComboBox6)),
-                editValue(getValue(jComboBox7)),
-                editValue(getValue(jComboBox8)),
-                editValue(getValue(jComboBox9)),
-                editValue(getValue(jComboBox10))
+                editValue(getValue(jComboBox1, jComboBox10)),
+                editValue(getValue(jComboBox2, jComboBox11)),
+                editValue(getValue(jComboBox3, jComboBox12)),
+                editValue(getValue(jComboBox4, jComboBox13)),
+                editValue(getValue(jComboBox5, jComboBox14)),
+                editValue(getValue(jComboBox6, jComboBox15)),
+                editValue(getValue(jComboBox7, jComboBox16)),
+                editValue(getValue(jComboBox8, jComboBox17)),
+                editValue(getValue(jComboBox9, jComboBox18))
         );
         if (tong_trongso > 0.99) {
             tong_trongso = 1;
         }
-//        for (int i = 0; i < 9; i++) {
-//            tong_trongso += mang_Trongso[i];
-//        }
+
     }
 
     // Chuc nang xep hang danh gia cua chuyen gia
@@ -1428,9 +1527,9 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
 
     private void creatBarchart(JTable jTable) {
         float pos[] = getPositivity(jTable);
-        if (pos.length == 0) {
+        if (pos.length < 5) {
             JOptionPane jo = new JOptionPane("Thông báo");
-            jo.showMessageDialog(this, "Bạn chưa chọn chuyên gia để đánh giá");
+            jo.showMessageDialog(this, "Bạn cần chọn 5 chuyên gia để đánh giá");
         } else {
             DefaultCategoryDataset dataSet = new DefaultCategoryDataset();
             for (int i = 0; i < pos.length; i++) {
@@ -1438,21 +1537,27 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                 if (i == 4) {
                     break;
                 }
+
             }
             JFreeChart chart = ChartFactory.createBarChart("Độ tích cực trong đánh giá của chuyên gia", "", "Ghi chú", dataSet);
             CategoryPlot p = chart.getCategoryPlot();
             p.setRangeGridlinePaint(Color.BLACK);
             p.getRangeAxis().setUpperBound(1.0);
-            ChartFrame frame = new ChartFrame("Biểu đồ độ tích cực", chart);
+            JFrame frame = new JFrame("Biểu đồ độ tích cực");
+            ChartPanel panel = new ChartPanel(chart);
+            frame.add(panel);
             frame.setVisible(true);
             frame.setSize(800, 600);
             frame.setLocationRelativeTo(null);
-            JPanel jPanel = new JPanel();
-            JLabel jL = new JLabel();
-            jL.setText("ahglagsldkag");
-            jPanel.setBackground(Color.yellow);
-            jPanel.setBounds(100, 100, 1000, 1000);
-            frame.add(jL);
+//            String data[][] = {
+//                {"1", "mootj", "one"},
+//                {"2", "hai", "two"},
+//                {"3", "ba", "three"}
+//            };
+//            String column[] = {"number", "viet", "anh"};
+//            JTable jt = new JTable(data, column);
+//            JScrollPane sp = new JScrollPane(jt);  
+//            panel.add(jt);
             frame.addWindowListener(new WindowAdapter() {
                 @Override
                 public void windowClosing(WindowEvent we) {
@@ -1460,7 +1565,6 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
                     isExistBarchart = false;
                 }
             });
-
         }
     }
 
@@ -1873,14 +1977,4 @@ public class Danhgia_Tuvan extends javax.swing.JFrame {
         }
     }
 
-//    public void sendMail(String mail, String nameLesson, String final_Tuvan) {
-//        try {
-//
-//            test.send("smtp.gmail.com", mail, "quang8490@gmail.com", "maiyeuanh2", nameLesson, final_Tuvan);
-//            JOptionPane jo = new JOptionPane("Thông báo");
-//            jo.showMessageDialog(this, "Gửi mail thành công!");
-//        } catch (Exception ex) {
-//            Logger.getLogger(Danhgia_Tuvan.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//    }
 }
